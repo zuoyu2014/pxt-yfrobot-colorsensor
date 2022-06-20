@@ -129,7 +129,7 @@ namespace TCS3472X {
 
         // Set default integration time and gain.
         LCS_set_integration_time(0.0048)
-        LCS_set_gain(LCS_Constants.GAIN_16X)
+        LCS_set_gain(LCS_Constants.GAIN_60X)
 
         // Enable the device (by default, the device is in power down mode on bootup).
         LCS_enable()
