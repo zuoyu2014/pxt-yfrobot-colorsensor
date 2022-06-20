@@ -35,7 +35,7 @@ namespace TCS3472X {
     enum LCS_Constants {
         // Constants
         ADDRESS = 0x29,
-        ID = 0x44, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
+        ID = 0x4D, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
 
         COMMAND_BIT = 0x80,
 
@@ -172,35 +172,6 @@ namespace TCS3472X {
         basic.pause(2 * (256 - LCS_integration_time_val) * 2.4) // delay for long enough for there to be new (post-change) complete values available
     }
 
-    // // blockId="getColor" block="读取颜色的颜色是"
-    // export function getColor(): RGB {
-    //     basic.pause((256 - LCS_integration_time_val) * 2.4);
-        
-    //      let r = I2C_ReadReg16(LCS_Constants.ADDRESS, (LCS_Constants.COMMAND_BIT | LCS_Constants.RDATAL));
-    //      let g =  I2C_ReadReg16(LCS_Constants.ADDRESS, (LCS_Constants.COMMAND_BIT | LCS_Constants.GDATAL));
-    //      let b = I2C_ReadReg16(LCS_Constants.ADDRESS, (LCS_Constants.COMMAND_BIT | LCS_Constants.BDATAL));
-         
-    //     //  serial.writeLine("R:"+r + " G:" + g + " B:" + b);
-         
-    //      let color = RGB.RED;
-    //      let max = r;
-    //      if(g > max){
-    //          max = g;
-    //          color = RGB.GREEN;
-    //      }
-    //      if(b > max){
-    //          max = b;
-    //          color = RGB.BLUE;
-    //      }
-
-    //     // serial.writeLine("val: " + color);
-    //     return color;
-    // }
-    // // blockId="colorType" block="颜色值 %colorType"
-    // export function colorType(colorType:RGB): RGB{
-    //     return colorType;
-    // }
-    
     //% blockId="getColorRawData" block="读取传感器原始值 %colorId"
     //% weight=5
     export function getColorRawData(color: RGB_RAW): number {
