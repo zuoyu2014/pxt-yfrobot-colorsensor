@@ -35,7 +35,7 @@ namespace TCS3472X {
     enum LCS_Constants {
         // Constants
         ADDRESS = 0x29,
-        ID = 0x12, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
+        ID = 0x44, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
 
         COMMAND_BIT = 0x80,
 
