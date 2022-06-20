@@ -35,7 +35,7 @@ namespace TCS3472X {
     enum LCS_Constants {
         // Constants
         ADDRESS = 0x29,
-        ID = 0x4D, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
+        ID = 0x44, // Register should be equal to 0x44 for the TCS34721 or TCS34725, or 0x4D for the TCS34723 or TCS34727.
 
         COMMAND_BIT = 0x80,
 
@@ -129,7 +129,7 @@ namespace TCS3472X {
 
         // Set default integration time and gain.
         LCS_set_integration_time(0.0048)
-        LCS_set_gain(LCS_Constants.GAIN_60X)
+        LCS_set_gain(LCS_Constants.GAIN_1X)
 
         // Enable the device (by default, the device is in power down mode on bootup).
         LCS_enable()
